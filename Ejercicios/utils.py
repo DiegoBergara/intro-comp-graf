@@ -31,9 +31,7 @@ def drawMultipleTriangles(vertices, normals, colors):
 
 def drawTriangle(v1, v2, v3):
     verts = [
-        v1[0],v1[1],v1[2],
-        v2[0],v2[1],v2[2],
-        v3[0],v3[1],v3[2]
+        v1,v2,v3
     ]
 
     glEnableClientState(GL_VERTEX_ARRAY)
@@ -43,5 +41,6 @@ def drawTriangle(v1, v2, v3):
 
 def drawTrianglesOneByOne(vertices):
     for trio in vertices:
-            dibujar_triangulo(trio[0], trio[1], trio[2])
+        print(trio)
+        drawTriangle(trio[0], trio[1], trio[2])
 
