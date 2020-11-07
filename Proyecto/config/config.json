@@ -1,0 +1,24 @@
+{
+    "models": [
+        {
+            "knight": {
+                "text": "knight_good.png",
+                "animations": [
+                    {
+                        "name": "knight_stand",
+                        "qty": 40,
+                        "frames": 10
+                    }
+                ]
+            }
+        }
+    ],
+    "map":[
+        {
+            "floor":{
+                "text":"floor_texture.jpg",
+                "obj":"floor"
+            }
+        }
+    ]
+}
