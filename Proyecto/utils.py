@@ -14,7 +14,7 @@ def drawMultipleTriangles(vertices, normales, texturas, textura):
     glNormalPointer(GL_FLOAT, 0, normales)
     glEnableClientState(GL_TEXTURE_COORD_ARRAY)
     glTexCoordPointer(2, GL_FLOAT, 0, texturas)
-    
+
     glBindTexture(GL_TEXTURE_2D, textura)
     glDrawArrays(GL_TRIANGLES, 0, int(len(vertices)))
     glDisableClientState(GL_VERTEX_ARRAY)
@@ -24,7 +24,7 @@ def drawMultipleTriangles(vertices, normales, texturas, textura):
 
 def setup(ancho, largo):
     glMaterial(GL_FRONT_AND_BACK, GL_DIFFUSE, [1,1,1,1])
-    glMaterial(GL_FRONT_AND_BACK, GL_AMBIENT, [1,1,1,1]) 
+    glMaterial(GL_FRONT_AND_BACK, GL_AMBIENT, [1,1,1,1])
     glMaterial(GL_FRONT_AND_BACK, GL_SPECULAR, [1,1,1,1])
     glMaterial(GL_FRONT_AND_BACK, GL_SHININESS, 16)
 
@@ -42,9 +42,9 @@ def setup(ancho, largo):
 
     glFrustum(-1, 1, -1, 1, 1, 1000)
 
-    glEnable(GL_DEPTH_TEST) 
-    glEnable(GL_CULL_FACE) 
-    glFrontFace(GL_CW) 
+    glEnable(GL_DEPTH_TEST)
+    glEnable(GL_CULL_FACE)
+    glFrontFace(GL_CW)
     glEnable(GL_TEXTURE_2D)
     glActiveTexture(GL_TEXTURE0)
     glMatrixMode(GL_MODELVIEW)
@@ -97,3 +97,9 @@ def loadTexture(path):
     glBindTexture(GL_TEXTURE_2D, 0)
     # devuelvo el identificador de la textura para que pueda ser usada mas adelante
     return texid
+
+def before_draw(camera_angle, fov):
+    glLoadIdentity()
+    glTranslatef(0.0, 0.0, -fov)
+    glRotatef(15, 1, 0, 0)
+    glRotatef(camera_angle, 0, 1, 0)

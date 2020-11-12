@@ -1,24 +1,99 @@
 {
-    "models": [
-        {
-            "knight": {
-                "text": "knight_good.png",
-                "animations": [
-                    {
-                        "name": "knight_stand",
-                        "qty": 40,
-                        "frames": 10
-                    }
-                ]
-            }
-        }
+    "display": [
+        800,
+        600
     ],
-    "map":[
-        {
-            "floor":{
-                "text":"floor_texture.jpg",
-                "obj":"floor"
-            }
+    "fov": 50,
+    "directory": {
+        "objs": "./objs",
+        "textures": "./textures"
+    },
+    "models": {
+        "knight": {
+            "text": "knight_good.png",
+            "animations": [
+                {
+                    "name": "knight_stand",
+                    "qty": 40,
+                    "frames": 11
+                },
+                {
+                    "name": "knight_run",
+                    "qty": 6,
+                    "frames": 10
+                },
+                {
+                    "name": "knight_jump",
+                    "qty": 6,
+                    "frames": 10
+                },
+                {
+                    "name": "knight_attack",
+                    "qty": 7,
+                    "frames": 11
+                },
+                {
+                    "name": "knight_point",
+                    "qty": 12,
+                    "frames": 10
+                },
+                {
+                    "name": "knight_flip",
+                    "qty": 12,
+                    "frames": 9
+                },
+                {
+                    "name": "knight_wave",
+                    "qty": 11,
+                    "frames": 9
+                }
+            ]
+        },
+        "weapon": {
+            "text": "weapon_k.png",
+            "animations": [
+                {
+                    "name": "weapon_k_stand",
+                    "qty": 40,
+                    "frames": 11
+                },
+                {
+                    "name": "weapon_k_run",
+                    "qty": 6,
+                    "frames": 11
+                },
+                {
+                    "name": "weapon_k_jump",
+                    "qty": 6,
+                    "frames": 11
+                },
+                {
+                    "name": "weapon_k_attack",
+                    "qty": 7,
+                    "frames": 13
+                },
+                {
+                    "name": "weapon_k_point",
+                    "qty": 12,
+                    "frames": 9
+                },
+                {
+                    "name": "weapon_k_flip",
+                    "qty": 12,
+                    "frames": 10
+                },
+                {
+                    "name": "weapon_k_wave",
+                    "qty": 11,
+                    "frames": 10
+                }
+            ]
         }
-    ]
+    },
+    "map": {
+        "floor": {
+            "text": "floor_texture.jpg",
+            "name": "floor"
+        }
+    }
 }
