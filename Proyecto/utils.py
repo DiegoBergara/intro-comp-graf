@@ -43,6 +43,7 @@ def setup(ancho, largo):
     glFrustum(-1, 1, -1, 1, 1, 1500)
 
     glEnable(GL_DEPTH_TEST)
+    glShadeModel(GL_SMOOTH)
     glEnable(GL_CULL_FACE)
     glFrontFace(GL_CW)
     glEnable(GL_TEXTURE_2D)
