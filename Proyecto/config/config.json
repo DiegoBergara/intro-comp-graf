@@ -6,7 +6,8 @@
     "fov": 50,
     "directory": {
         "objs": "./objs",
-        "textures": "./textures"
+        "textures": "./textures",
+        "sounds": "./sounds"
     },
     "models": {
         "knight": {
@@ -94,6 +95,19 @@
         "floor": {
             "text": "floor_texture.jpg",
             "name": "floor"
+        },
+        "sky": {
+            "text": [
+                "night_sky.jpg",
+                "sky_texture.jpeg"
+            ],
+            "name": "sky"
         }
+    },
+    "sounds": {
+        "background":"background.mp3",
+        "footstep":"footstep.mp3",
+        "attack":"attack.mp3",
+        "lol" : "lol.mp3"
     }
 }

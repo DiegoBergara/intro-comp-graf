@@ -32,7 +32,6 @@ class Model:
     def __init__(self, animations, texture, directory):
         self.texture = texture
         self.animations = []
-        print(animations)
         for elem in animations:
             anim = Animation(elem["frames"], elem["qty"], elem["name"],directory)
             self.animations.append(anim)
@@ -64,7 +63,7 @@ class Static:
         obj.load(obj_dir)
         self.obj = obj
     
-    def draw(self, camera_angle, fov, walking, direction):
+    def draw(self, camera_angle, fov, walking, direction, is_Sky = False):
         before_draw(camera_angle,fov)
         if (walking):
             if direction == 0:
@@ -76,4 +75,10 @@ class Static:
             elif direction == 2:
                 self.y -=1
         glTranslate(self.y,0,self.x)
-        drawMultipleTriangles(self.obj.get_vertices(),self.obj.get_normales(),self.obj.get_texturas(), self.texture)
+
+        if (is_Sky):
+            glDisable(GL_LIGHTING)
+            drawMultipleTriangles(self.obj.get_vertices(),self.obj.get_normales(),self.obj.get_texturas(), self.texture)
+            glEnable(GL_LIGHTING)
+        else:
+            drawMultipleTriangles(self.obj.get_vertices(),self.obj.get_normales(),self.obj.get_texturas(), self.texture)

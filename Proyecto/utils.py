@@ -40,7 +40,7 @@ def setup(ancho, largo):
     glLoadIdentity()
     glViewport(0, 0, ancho, largo)
 
-    glFrustum(-1, 1, -1, 1, 1, 1000)
+    glFrustum(-1, 1, -1, 1, 1, 1500)
 
     glEnable(GL_DEPTH_TEST)
     glEnable(GL_CULL_FACE)
