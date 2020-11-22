@@ -40,7 +40,7 @@ def setup(ancho, largo):
     glLoadIdentity()
     glViewport(0, 0, ancho, largo)
 
-    glFrustum(-1, 1, -1, 1, 1, 1500)
+    glFrustum(-1, 1, -1, 1, 1, 10000)
 
     glEnable(GL_DEPTH_TEST)
     glShadeModel(GL_SMOOTH)
